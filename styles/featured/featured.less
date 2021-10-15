@@ -1,0 +1,122 @@
+@import "../global/mixin.less";
+@import "../global/variables.less";
+
+.featured {
+  background: @primary-color;
+  color: @secondary-color;
+
+  .container {
+    min-height: 1300px;
+    flex-direction: column;
+    .container;
+    .flex-container(unset, space-evenly);
+
+    @media (max-width: 1250px) {
+      align-items: center;
+    }
+  }
+
+  .title {
+    .title-2;
+
+    @media (max-width: 1250px) {
+      margin: 50px 0;
+    }
+  }
+
+  .images-container {
+    flex-wrap: wrap;
+    .flex-container(center, space-around);
+  }
+
+  .image-block {
+    padding-bottom: 50px;
+    flex-direction: column;
+    .flex-container(unset, center);
+
+    @media (max-width: 650px) {
+      padding-bottom: 0;
+    }
+
+    .image {
+      margin-bottom: 38px;
+      object-fit: contain;
+      width: 500px;
+      height: 400px;
+
+      @media (max-width: 950px) {
+        width: 400px;
+        height: 370px;
+        margin-bottom: 19px;
+      }
+
+      @media (max-width: 650px) {
+        object-fit: cover;
+        width: 80%;
+        height: 350px;
+        margin-bottom: 0;
+        padding: 25px 0;
+      }
+    }
+
+    .image-button {
+      width: 102px;
+      background: #f3f3f5;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+      color: #676774;
+      opacity: 0.87;
+      padding: 8px 16px;
+      margin-bottom: 28px;
+    }
+
+    .image-title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 26px;
+      text-transform: uppercase;
+      color: #242539;
+      margin-bottom: 13px;
+
+      @media (max-width: 650px) {
+        max-width: 200px;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .text {
+      max-width: 464px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 29px;
+      color: #242539;
+
+      @media (max-width: 650px) {
+        max-width: 85%;
+        font-size: 16px;
+        line-height: 27px;
+      }
+    }
+  }
+
+  .button {
+    align-self: center;
+    .primary-button(#242539, @primary-color, #242539);
+
+    &:hover {
+      background: @active-color;
+      border: 1px solid @active-color;
+    }
+
+    @media (max-width: 650px) {
+      align-self: flex-start;
+      margin-top: 50px;
+    }
+  }
+}

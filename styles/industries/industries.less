@@ -1,0 +1,101 @@
+@import "../global/mixin.less";
+@import "../global/variables.less";
+
+.industries {
+  background: #242539;
+  position: relative;
+
+  @media (max-width: 950px) {
+    position: static;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .container {
+    min-height: 785px;
+    .container;
+    .flex-container(center, unset);
+
+    @media (max-width: 950px) {
+      justify-content: center;
+    }
+  }
+
+  .text-block {
+    flex-direction: column;
+    .flex-container(unset, space-evenly);
+    min-height: 600px;
+    z-index: 10;
+  }
+
+  .text-top {
+    .flex-container(center, unset);
+    .line {
+      width: 50px;
+      height: 2px;
+      background-color: @active-color;
+    }
+
+    h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      margin-left: 20px;
+    }
+  }
+
+  .title {
+    .title-2;
+
+    @media (max-width: 950px) {
+      text-align: start;
+    }
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    max-width: 630px;
+
+    @media (max-width: 650px) {
+      font-size: 17px;
+      line-height: 27px;
+    }
+  }
+
+  .button {
+    .primary-button(@primary-color, transparent, #3e3f51);
+
+    &:hover {
+      background: @primary-color;
+      border: 1px solid @active-color;
+      color: @active-color;
+    }
+  }
+
+  .mask {
+    width: 60%;
+    height: 100%;
+    background: url(../images/travel.jpg) center center / cover no-repeat;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    filter: brightness(35%);
+
+    @media (max-width: 950px) {
+      height: 700px;
+      position: static;
+      width: 100%;
+    }
+
+    @media (max-width: 650px) {
+      height: 550px;
+    }
+  }
+}

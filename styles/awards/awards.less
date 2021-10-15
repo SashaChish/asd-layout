@@ -1,0 +1,34 @@
+@import "../global/mixin.less";
+@import "../global/variables.less";
+
+.awards {
+  color: @secondary-color;
+  background: #f3f3f5;
+
+  .container {
+    min-height: 440px;
+    flex-wrap: wrap;
+    .flex-container(center, center);
+    .container;
+  }
+
+  .title {
+    width: 500px;
+    .title-2;
+    font-size: 50px;
+    line-height: 61px;
+
+    @media (max-width: 950px) {
+      max-width: 450px;
+    }
+  }
+
+  .awards-block {
+    .flex-container(center, space-around);
+    min-width: 70%;
+
+    .image {
+      object-fit: contain;
+    }
+  }
+}

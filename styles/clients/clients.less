@@ -1,0 +1,145 @@
+@import "../global/mixin.less";
+@import "../global/variables.less";
+
+.clients {
+  background: #f3f3f5;
+  color: @secondary-color;
+
+  .container {
+    min-height: 1000px;
+    flex-direction: column;
+    .container;
+    .flex-container(unset, space-around);
+
+    @media (max-width: 1250px) {
+      align-items: center;
+    }
+  }
+
+  .title {
+    .title-2;
+  }
+
+  .client-block {
+    flex-wrap: wrap-reverse;
+    .flex-container(center, space-between);
+
+    @media (max-width: 1200px) {
+      min-height: 600px;
+      justify-content: center;
+    }
+  }
+
+  .client-about {
+    min-width: 450px;
+
+    @media (max-width: 1200px) {
+      display: flex;
+      width: 300px;
+      justify-content: space-around;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: 35px;
+    }
+
+    .client {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 25px;
+    }
+
+    .position {
+      min-width: 200px;
+
+      span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .text {
+    max-width: 800px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 44px;
+
+    @media (max-width: 1200px) {
+      max-width: 600px;
+    }
+
+    @media (max-width: 650px) {
+      max-width: 400px;
+      font-size: 20px;
+      line-height: 37px;
+    }
+  }
+
+  .pagination-block {
+    .flex-container;
+    flex-wrap: wrap-reverse;
+    height: 150px;
+  }
+
+  .buttons {
+    @media (max-width: 650px) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 200px;
+    }
+
+    .button {
+      width: 69px;
+      height: 69px;
+      border-radius: 50%;
+      border: 1px solid #dadada;
+    }
+
+    .arrow-left {
+      background: url(../images/arrow-left.png) 40% 50% / cover no-repeat;
+      background-size: 40%;
+      margin-right: 15px;
+
+      @media (max-width: 650px) {
+        margin: 0;
+      }
+    }
+
+    .arrow-right {
+      background: url(../images/arrow-right.png) 60% 50% / cover no-repeat;
+      background-size: 40%;
+      margin-right: 70px;
+
+      @media (max-width: 650px) {
+        margin: 0;
+      }
+    }
+  }
+
+  .slider-lines {
+    width: 160px;
+    .flex-container(center, space-around);
+
+    .slide-control {
+      width: 29px;
+      height: 3px;
+      background: #dadada;
+      cursor: pointer;
+
+      &:first-child {
+        background-color: @active-color;
+      }
+
+      &:hover {
+        background-color: @active-color;
+      }
+    }
+  }
+}

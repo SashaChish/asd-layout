@@ -1,0 +1,38 @@
+@import "../global/mixin.less";
+@import "../global/variables.less";
+
+.partners {
+  background: @primary-color;
+
+  .container {
+    min-height: 725px;
+    flex-direction: column;
+    .container;
+    .flex-container(flex-start, space-evenly);
+
+    @media (max-width: 1250px) {
+      align-items: center;
+    }
+  }
+
+  .title {
+    .title-2;
+    max-width: 501px;
+    color: @secondary-color;
+  }
+
+  .partners-block {
+    width: 100%;
+    flex-wrap: wrap;
+    .flex-container(unset, space-between);
+
+    @media (max-width: 950px) {
+      justify-content: space-around;
+    }
+
+    .partner {
+      padding: 30px;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import "global/mixin.less";
+@import "global/variables.less";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  color: @primary-color;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+img {
+  object-fit: cover;
+}
+
+.section {
+  .flex-container(unset, center);
+  padding-bottom: 100px;
+}
+
+@import "header/header.less";
+@import "about/about.less";
+@import "industries/industries.less";
+@import "partners/partners.less";
+@import "clients/clients.less";
+@import "featured/featured.less";
+@import "awards/awards.less";
