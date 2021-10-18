@@ -24,7 +24,12 @@ img {
   display: flex;
   align-items: unset;
   justify-content: center;
-  padding-bottom: 100px;
+  padding: 160px 0;
+}
+@media (max-width: 1250px) {
+  .section {
+    padding: 100px 0;
+  }
 }
 #menu-toggle {
   display: none;
@@ -438,6 +443,11 @@ img {
     width: 370px;
   }
 }
+@media (max-width: 450px) {
+  .about .content-text {
+    width: 90%;
+  }
+}
 .about .text-block {
   width: 580px;
   display: flex;
@@ -461,6 +471,11 @@ img {
   font-weight: normal;
   font-size: 40px;
   line-height: 49px;
+}
+@media (max-width: 450px) {
+  .about .text-block .number {
+    margin-right: 20px;
+  }
 }
 .about .text-block .text {
   max-width: 470px;
@@ -526,9 +541,15 @@ img {
     height: 500px;
   }
 }
+@media (max-width: 450px) {
+  .about .image {
+    width: 85%;
+  }
+}
 .industries {
   background: #242539;
   position: relative;
+  padding: 0;
 }
 @media (max-width: 950px) {
   .industries {
@@ -667,9 +688,15 @@ img {
 }
 .partners {
   background: #ffffff;
+  padding: 0;
+}
+@media (max-width: 450px) {
+  .partners {
+    padding: 100px 0;
+  }
 }
 .partners .container {
-  min-height: 725px;
+  min-height: 600px;
   flex-direction: column;
   height: 100%;
   width: 80%;
@@ -774,11 +801,12 @@ img {
     display: flex;
     width: 300px;
     justify-content: space-around;
+    margin-top: 35px;
   }
 }
-@media (min-width: 1200px) {
+@media (max-width: 450px) {
   .clients .client-about {
-    margin-top: 35px;
+    min-width: 200px;
   }
 }
 .clients .client-about .client {
@@ -811,7 +839,7 @@ img {
 }
 @media (max-width: 650px) {
   .clients .text {
-    max-width: 400px;
+    max-width: 300px;
     font-size: 20px;
     line-height: 37px;
   }
@@ -823,12 +851,9 @@ img {
   flex-wrap: wrap-reverse;
   height: 150px;
 }
-@media (max-width: 650px) {
-  .clients .buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 200px;
+@media (max-width: 450px) {
+  .clients .pagination-block {
+    width: 300px;
   }
 }
 .clients .buttons .button {
@@ -837,31 +862,38 @@ img {
   border-radius: 50%;
   border: 1px solid #dadada;
 }
-.clients .buttons .arrow-left {
-  background: url(../images/arrow-left.png) 40% 50% / cover no-repeat;
-  background-size: 40%;
+.clients .buttons .button-arrow {
+  background: transparent;
   margin-right: 15px;
 }
-@media (max-width: 650px) {
-  .clients .buttons .arrow-left {
-    margin: 0;
-  }
-}
-.clients .buttons .arrow-right {
-  background: url(../images/arrow-right.png) 60% 50% / cover no-repeat;
-  background-size: 40%;
+.clients .buttons .button-arrow + .button-arrow {
   margin-right: 70px;
 }
-@media (max-width: 650px) {
-  .clients .buttons .arrow-right {
-    margin: 0;
+@media (max-width: 450px) {
+  .clients .buttons .button-arrow + .button-arrow {
+    margin-right: 0;
   }
+}
+.clients .buttons .img-arrow {
+  width: 50%;
+  height: 50%;
+}
+.clients .buttons .left {
+  transform: translateX(-5px);
+}
+.clients .buttons .right {
+  transform: translateX(5px);
 }
 .clients .slider-lines {
   width: 160px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media (max-width: 450px) {
+  .clients .slider-lines {
+    width: 200px;
+  }
 }
 .clients .slider-lines .slide-control {
   width: 29px;
@@ -898,6 +930,11 @@ img {
     align-items: center;
   }
 }
+@media (max-width: 450px) {
+  .featured .container {
+    margin-left: 20px;
+  }
+}
 .featured .title {
   font-style: normal;
   font-weight: normal;
@@ -913,7 +950,13 @@ img {
 }
 @media (max-width: 1250px) {
   .featured .title {
-    margin: 50px 0;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .featured .title {
+    width: 100%;
+    text-align: left;
   }
 }
 .featured .images-container {
@@ -1083,4 +1126,9 @@ img {
 }
 .awards .awards-block .image {
   object-fit: contain;
+}
+@media (max-width: 950px) {
+  .awards .awards-block .image {
+    width: 30%;
+  }
 }

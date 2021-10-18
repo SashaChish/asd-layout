@@ -22,7 +22,11 @@ img {
 
 .section {
   .flex-container(unset, center);
-  padding-bottom: 100px;
+  padding: 160px 0;
+
+  @media (max-width: 1250px) {
+    padding: 100px 0;
+  }
 }
 
 @import "header/header.less";

@@ -37,10 +37,11 @@
       display: flex;
       width: 300px;
       justify-content: space-around;
+      margin-top: 35px;
     }
 
-    @media (min-width: 1200px) {
-      margin-top: 35px;
+    @media (max-width: 450px) {
+      min-width: 200px;
     }
 
     .client {
@@ -75,9 +76,12 @@
     }
 
     @media (max-width: 650px) {
-      max-width: 400px;
+      max-width: 300px;
       font-size: 20px;
       line-height: 37px;
+    }
+
+    @media (max-width: 450px) {
     }
   }
 
@@ -85,16 +89,13 @@
     .flex-container;
     flex-wrap: wrap-reverse;
     height: 150px;
+
+    @media (max-width: 450px) {
+      width: 300px;
+    }
   }
 
   .buttons {
-    @media (max-width: 650px) {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 200px;
-    }
-
     .button {
       width: 69px;
       height: 69px;
@@ -102,30 +103,40 @@
       border: 1px solid #dadada;
     }
 
-    .arrow-left {
-      background: url(../images/arrow-left.png) 40% 50% / cover no-repeat;
-      background-size: 40%;
+    .button-arrow {
+      background: transparent;
       margin-right: 15px;
+    }
 
-      @media (max-width: 650px) {
-        margin: 0;
+    .button-arrow + .button-arrow {
+      margin-right: 70px;
+
+      @media (max-width: 450px) {
+        margin-right: 0;
       }
     }
 
-    .arrow-right {
-      background: url(../images/arrow-right.png) 60% 50% / cover no-repeat;
-      background-size: 40%;
-      margin-right: 70px;
+    .img-arrow {
+      width: 50%;
+      height: 50%;
+    }
 
-      @media (max-width: 650px) {
-        margin: 0;
-      }
+    .left {
+      transform: translateX(-5px);
+    }
+
+    .right {
+      transform: translateX(5px);
     }
   }
 
   .slider-lines {
     width: 160px;
     .flex-container(center, space-around);
+
+    @media (max-width: 450px) {
+      width: 200px;
+    }
 
     .slide-control {
       width: 29px;

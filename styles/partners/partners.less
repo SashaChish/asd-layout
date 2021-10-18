@@ -3,9 +3,14 @@
 
 .partners {
   background: @primary-color;
+  padding: 0;
+
+  @media (max-width: 450px) {
+    padding: 100px 0;
+  }
 
   .container {
-    min-height: 725px;
+    min-height: 600px;
     flex-direction: column;
     .container;
     .flex-container(flex-start, space-evenly);
