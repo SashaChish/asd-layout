@@ -5,19 +5,11 @@
   background: @primary-color;
   padding: 0;
 
-  @media (max-width: 450px) {
-    padding: 100px 0;
-  }
-
   .container {
     min-height: 600px;
     flex-direction: column;
     .container();
     .flex-container(flex-start, space-evenly);
-
-    @media (max-width: 1250px) {
-      align-items: center;
-    }
   }
 
   .title {
@@ -31,13 +23,11 @@
     flex-wrap: wrap;
     .flex-container(unset, space-between);
 
-    @media (max-width: 950px) {
-      justify-content: space-around;
-    }
-
     .partner {
       padding: 30px;
       object-fit: contain;
     }
   }
 }
+
+@import "./media/media.less";

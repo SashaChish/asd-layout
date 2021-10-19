@@ -1,12 +1,8 @@
-@import "../global/mixin.less";
-@import "../global/variables.less";
+@import "../../global/mixin.less";
+@import "../../global/variables.less";
 
 .tell-about {
   border-bottom: 1px solid #3e3f51;
-
-  @media (max-width: 1250px) {
-    padding-bottom: 255px;
-  }
 
   .container {
     .container();
@@ -17,33 +13,10 @@
     text-align: left;
     width: 595px;
     margin-bottom: 100px;
-
-    @media (max-width: 1250px) {
-      text-align: left;
-      padding-left: 25px;
-    }
-
-    @media (max-width: 650px) {
-      width: 300px;
-      margin-bottom: 50px;
-      padding-left: 10px;
-    }
   }
 
   .wrap {
     .flex-container(unset, space-between);
-
-    @media (max-width: 1250px) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  .description {
-    @media (max-width: 1250px) {
-      width: 90%;
-      position: relative;
-    }
   }
 
   .main-text {
@@ -53,47 +26,16 @@
       width: 400px;
       font-size: 18px;
       line-height: 29px;
-
-      @media (max-width: 1250px) {
-        width: 80%;
-      }
-
-      @media (max-width: 650px) {
-        width: 100%;
-      }
     }
   }
 
   .additional-text {
-    @media (max-width: 1250px) {
-      position: absolute;
-      top: 350%;
-    }
-
-    @media (max-width: 950px) {
-      top: 320%;
-    }
-
-    @media (max-width: 650px) {
-      top: 340%;
-    }
-
-    @media (max-width: 450px) {
-      top: 310%;
-    }
-
     .title {
       width: 200px;
       font-weight: bold;
       font-size: 22px;
       line-height: 44px;
       margin: 0 0 6px;
-
-      @media (max-width: 1250px) {
-        text-align: left;
-        width: 250px;
-        padding-left: 0;
-      }
     }
 
     .contact {
@@ -112,24 +54,11 @@
 
   .submit-form {
     width: 600px;
-
-    @media (max-width: 1250px) {
-      width: 90%;
-    }
-
-    @media (max-width: 950px) {
-      .flex-container(center, unset);
-      flex-direction: column;
-    }
   }
 
   .input-container {
     .flex-container(unset, space-between);
     width: 100%;
-
-    @media (max-width: 650px) {
-      flex-direction: column;
-    }
   }
 
   .input {
@@ -143,10 +72,6 @@
     line-height: 22px;
     color: #f9f9f9;
     background: #1e1e2c;
-
-    @media (max-width: 650px) {
-      width: 100%;
-    }
 
     &:focus {
       border-bottom: 2px solid @active-color;
@@ -173,13 +98,11 @@
     .primary-button(@primary-color, @active-color, transparent);
     transition-duration: 0.4s;
 
-    @media (max-width: 950px) {
-      width: 100%;
-    }
-
     &:hover {
       background: transparent;
       border-color: @active-color;
     }
   }
 }
+
+@import "./media/media.less";

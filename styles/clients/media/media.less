@@ -1,0 +1,78 @@
+@import "../../global/mixin.less";
+
+@media (max-width: 1250px) {
+  .clients {
+    .container {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .clients {
+    .client-block {
+      min-height: 600px;
+      justify-content: center;
+    }
+
+    .client-about {
+      display: flex;
+      width: 300px;
+      justify-content: space-around;
+      margin-top: 35px;
+    }
+
+    .text {
+      max-width: 600px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .clients {
+  }
+}
+
+@media (max-width: 650px) {
+  .clients {
+    .text {
+      max-width: 300px;
+      font-size: 20px;
+      line-height: 37px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .clients {
+
+    .client-block {
+      justify-content: flex-start;
+    }
+
+    .client-about {
+      min-width: 200px;
+
+      .client {
+        margin-right: 20px;
+      }
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    .pagination-block {
+      width: 300px;
+      justify-content: flex-start;
+    }
+
+    .button-arrow + .button-arrow {
+      margin-right: 0;
+    }
+
+    .slider-lines {
+      width: 200px;
+    }
+  }
+}

@@ -6,21 +6,10 @@
   position: relative;
   padding: 0;
 
-  @media (max-width: 950px) {
-    position: static;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 0;
-  }
-
   .container {
     min-height: 785px;
     .container();
     .flex-container(center, unset);
-
-    @media (max-width: 950px) {
-      justify-content: center;
-    }
   }
 
   .text-block {
@@ -50,10 +39,6 @@
 
   .title {
     .title-2();
-
-    @media (max-width: 950px) {
-      text-align: start;
-    }
   }
 
   .text {
@@ -62,11 +47,6 @@
     font-size: 18px;
     line-height: 29px;
     max-width: 630px;
-
-    @media (max-width: 650px) {
-      font-size: 17px;
-      line-height: 27px;
-    }
   }
 
   .button {
@@ -88,15 +68,7 @@
     right: 0;
     top: 0;
     filter: brightness(35%);
-
-    @media (max-width: 950px) {
-      height: 700px;
-      position: static;
-      width: 100%;
-    }
-
-    @media (max-width: 650px) {
-      height: 550px;
-    }
   }
 }
+
+@import "./media/media.less";

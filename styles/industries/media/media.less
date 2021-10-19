@@ -1,0 +1,47 @@
+@import "../../global/mixin.less";
+
+@media (max-width: 1250px) {
+  .industries {
+  }
+}
+
+@media (max-width: 950px) {
+  .industries {
+    position: static;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0;
+
+    .container {
+      justify-content: center;
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    .mask {
+      height: 700px;
+      position: static;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .industries {
+    .text {
+      font-size: 17px;
+      line-height: 27px;
+    }
+
+    .mask {
+      height: 550px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .industries {
+  }
+}

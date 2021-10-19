@@ -10,10 +10,6 @@
     flex-direction: column;
     .container();
     .flex-container(unset, space-around);
-
-    @media (max-width: 1250px) {
-      align-items: center;
-    }
   }
 
   .title {
@@ -23,26 +19,10 @@
   .client-block {
     flex-wrap: wrap-reverse;
     .flex-container(center, space-between);
-
-    @media (max-width: 1200px) {
-      min-height: 600px;
-      justify-content: center;
-    }
   }
 
   .client-about {
     min-width: 450px;
-
-    @media (max-width: 1200px) {
-      display: flex;
-      width: 300px;
-      justify-content: space-around;
-      margin-top: 35px;
-    }
-
-    @media (max-width: 450px) {
-      min-width: 200px;
-    }
 
     .client {
       font-style: normal;
@@ -70,29 +50,12 @@
     font-weight: 500;
     font-size: 25px;
     line-height: 44px;
-
-    @media (max-width: 1200px) {
-      max-width: 600px;
-    }
-
-    @media (max-width: 650px) {
-      max-width: 300px;
-      font-size: 20px;
-      line-height: 37px;
-    }
-
-    @media (max-width: 450px) {
-    }
   }
 
   .pagination-block {
     .flex-container();
     flex-wrap: wrap-reverse;
     height: 150px;
-
-    @media (max-width: 450px) {
-      width: 300px;
-    }
   }
 
   .buttons {
@@ -107,7 +70,7 @@
       background: transparent;
       cursor: pointer;
       margin-right: 15px;
-      transition: .4s ease-in-out;
+      transition: 0.4s ease-in-out;
 
       &:hover {
         background: @active-color;
@@ -117,10 +80,6 @@
 
     .button-arrow + .button-arrow {
       margin-right: 70px;
-
-      @media (max-width: 450px) {
-        margin-right: 0;
-      }
     }
 
     .img-arrow {
@@ -141,10 +100,6 @@
     width: 160px;
     .flex-container(center, space-around);
 
-    @media (max-width: 450px) {
-      width: 200px;
-    }
-
     .slide-control {
       width: 29px;
       height: 3px;
@@ -161,3 +116,5 @@
     }
   }
 }
+
+@import "./media/media.less";

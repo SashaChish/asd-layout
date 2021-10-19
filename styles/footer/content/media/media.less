@@ -1,0 +1,92 @@
+@import "../../../global/mixin.less";
+
+@media (max-width: 1250px) {
+  .footer-content {
+    .pink-arrow {
+      display: none;
+    }
+
+    .slide {
+      flex-direction: column;
+      height: 130px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .slide-item + .slide-item {
+      display: none;
+    }
+
+    .slider-lines {
+      &:last-child {
+        width: 160px;
+        .flex-container(center, space-around);
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .footer-content {
+    .social-container {
+      top: -8px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-content {
+    .menu-block {
+      margin-right: 0;
+    }
+
+    .menu-list-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .menu-list-item {
+      font-size: 14px;
+      line-height: 27px;
+      width: 170px;
+    }
+
+    .social-container {
+      top: 2px;
+    }
+
+    .social-button {
+      width: 44px;
+      height: 44px;
+    }
+
+    .slider-title {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .slide-link {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-content {
+    .menu-block {
+      width: 100%;
+    }
+
+    .menu-list-title {
+      width: 100%;
+    }
+
+    .menu-list-item {
+      width: 100%;
+    }
+
+    .social-container {
+      left: 140px;
+    }
+  }
+}
