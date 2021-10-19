@@ -1,0 +1,267 @@
+@import "../global/mixin.less";
+@import "../global/variables.less";
+
+.footer-content {
+  border-bottom: 1px solid #3e3f51;
+
+  .container {
+    .container();
+    position: relative;
+  }
+
+  .footer-logo {
+    cursor: pointer;
+    margin-bottom: 60px;
+  }
+
+  .logo-img {
+    width: 99px;
+    height: 42px;
+    object-fit: contain;
+  }
+
+  .nav-wrap {
+    .flex-container(flex-start, space-between);
+    flex-wrap: wrap;
+  }
+
+  .footer-menu {
+    .flex-container(flex-start, space-between);
+    flex-wrap: wrap;
+  }
+
+  .menu-block {
+    margin-right: 35px;
+
+    @media (max-width: 650px) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .footer-menu-list {
+    list-style-type: none;
+  }
+
+  .menu-list-title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+
+    @media (max-width: 650px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+  }
+
+  .menu-list-item {
+    width: 205px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    padding-bottom: 30px;
+
+    @media (max-width: 650px) {
+      font-size: 14px;
+      line-height: 27px;
+      width: 170px;
+    }
+
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+
+    .footer-menu-link {
+      color: #676774;
+      text-decoration: none;
+    }
+  }
+
+  .social-container {
+    width: max-content;
+    display: flex;
+    position: absolute;
+    right: 0;
+
+    @media (max-width: 950px) {
+      top: -8px;
+    }
+
+    @media (max-width: 650px) {
+      top: 2px;
+    }
+
+    @media (max-width: 450px) {
+      left: 140px;
+    }
+  }
+
+  .social-button {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border-color: transparent;
+    background: #1e1e2c;
+    margin-right: 20px;
+    cursor: pointer;
+
+    @media (max-width: 650px) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .social-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+
+    &.linkedin-size {
+      width: 20px;
+      height: 16px;
+    }
+  }
+
+  .slider-title {
+    margin: 66px 0 54px;
+    width: 200px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+
+    @media (max-width: 650px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .slider {
+    .flex-container(center, space-between);
+  }
+
+  .pink-arrow {
+    cursor: pointer;
+
+    @media (max-width: 1250px) {
+      display: none;
+    }
+  }
+
+  .left {
+    transform: translateX(-20px);
+  }
+
+  .right {
+    transform: translateX(20px);
+  }
+
+  .slide {
+    width: 1000px;
+    .flex-container(center, space-evenly);
+
+    @media (max-width: 1250px) {
+      flex-direction: column;
+      height: 130px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .slide-item {
+    .flex-container(center, space-between);
+
+    &:hover {
+      .date-wrap {
+        background: @active-color;
+      }
+
+      .slide-link {
+        color: @active-color;
+      }
+    }
+  }
+
+  .slide-item + .slide-item {
+    @media (max-width: 1250px) {
+      display: none;
+    }
+  }
+
+  .date-wrap {
+    margin-right: 15px;
+    background: @primary-color;
+    color: @secondary-color;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    .flex-container();
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .day {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .month {
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 3px;
+  }
+
+  .slide-link {
+    width: 400px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    color: @primary-color;
+
+    @media (max-width: 650px) {
+      width: 100%;
+    }
+  }
+
+  .slider-lines {
+    display: none;
+
+    @media (max-width: 1250px) {
+      &:last-child {
+        width: 160px;
+        .flex-container(center, space-around);
+      }
+    }
+
+    .slide-control {
+      width: 29px;
+      height: 3px;
+      background: #dadada;
+      cursor: pointer;
+
+      &:first-child {
+        background-color: @active-color;
+      }
+
+      &:hover {
+        background-color: @active-color;
+      }
+    }
+  }
+}

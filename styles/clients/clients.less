@@ -8,7 +8,7 @@
   .container {
     min-height: 1000px;
     flex-direction: column;
-    .container;
+    .container();
     .flex-container(unset, space-around);
 
     @media (max-width: 1250px) {
@@ -17,7 +17,7 @@
   }
 
   .title {
-    .title-2;
+    .title-2();
   }
 
   .client-block {
@@ -86,7 +86,7 @@
   }
 
   .pagination-block {
-    .flex-container;
+    .flex-container();
     flex-wrap: wrap-reverse;
     height: 150px;
 
@@ -105,7 +105,14 @@
 
     .button-arrow {
       background: transparent;
+      cursor: pointer;
       margin-right: 15px;
+      transition: .4s ease-in-out;
+
+      &:hover {
+        background: @active-color;
+        opacity: 0.8;
+      }
     }
 
     .button-arrow + .button-arrow {
@@ -122,11 +129,11 @@
     }
 
     .left {
-      transform: translateX(-5px);
+      transform: translate(-5px, 2px);
     }
 
     .right {
-      transform: translateX(5px);
+      transform: translate(5px, 2px);
     }
   }
 
